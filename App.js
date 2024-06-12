@@ -1,22 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement(
-    "div",
-    {id : "parent"},
-    React.createElement(
-        "div",
-        {id : "child"},
-        [React.createElement("h1",{},"Namaste React Course 🚀"),
-            React.createElement("h2",{},"I am h2 tag"),
-            React.createElement("p",{},"Hello i am paragraph in react")
-        ]
-    )
+const Title = () => (
+  <h1 className="head" tabIndex="5">
+    Hello from JSX
+  </h1>
 );
 
+const HeadingComponent = () => (
+  <div id="container">
+    <Title/>
+    <h1 className="heading">Namaste React using functional components</h1>
+  </div>
+);
 
-console.log(parent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
 
-console.log("Milan");
+root.render(<HeadingComponent/>);
